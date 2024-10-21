@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $angkatan = $_POST['angkatan'];
     $kontak = $_POST['kontak'];
 
-    $stmt = $pdo->prepare(" INSERT INTO mahasiswa (nama, nim, program_studi, angkatan, kontak) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $pdo->prepare(" INSERT INTO data_mhs (nama, nim, program_studi, angkatan, kontak) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$nama, $nim, $program_studi, $angkatan, $kontak]);
 
     header("Location: index.php");
