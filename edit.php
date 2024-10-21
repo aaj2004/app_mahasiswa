@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-$stmt = $pdo->query("SELECT * FROM mahasiswa");
+$stmt = $pdo->query("SELECT * FROM data_mhs");
 $mahasiswas = $stmt->fetchAll();
 ?>
 
