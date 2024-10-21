@@ -3,7 +3,7 @@ include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $id = $_GET['id'];
-    $stmt = $pdo->prepare("SELECT * FROM mahasiswa WHERE id = ?");
+    $stmt = $pdo->prepare("SELECT * FROM data_mhs WHERE id = ?");
     $stmt->execute([$id]);
     $mahasiswa = $stmt->fetch();
 }
@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
 
-    $stmt = $pdo->prepare("DELETE FROM mahasiswa WHERE id = ?");
+    $stmt = $pdo->prepare("DELETE FROM data_mhs WHERE id = ?");
     $stmt->execute([$id]);
 
     header("Location: index.php");
